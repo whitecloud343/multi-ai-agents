@@ -6,6 +6,35 @@ A framework for creating, orchestrating, and managing multiple AI agents working
 
 This project provides tools and infrastructure for building multi-agent AI systems where specialized agents can collaborate on complex tasks, each contributing different capabilities and expertise.
 
+## 📦 Available Agents
+
+### Research Agent
+The Research Agent can extract information from documents (PDFs, text files) and answer questions about their content:
+
+- Document processing and text extraction
+- Vector embeddings for semantic search
+- Question-answering capabilities
+- Conversation context maintenance
+- PDF and text file support
+
+**Usage:**
+```python
+from research_agent import ResearchAgent
+
+# Initialize the agent
+agent = ResearchAgent()
+
+# Process a document
+agent.process_pdf("path/to/document.pdf")
+
+# Build vector database
+agent.build_vector_database()
+
+# Ask questions
+result = agent.answer_question("What does the document say about X?")
+print(result["answer"])
+```
+
 ## 🤖 Agent Capabilities
 
 ### Web Search & Information Retrieval
@@ -114,7 +143,28 @@ This project provides tools and infrastructure for building multi-agent AI syste
 
 ## 📋 Getting Started
 
-[Documentation coming soon]
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/whitecloud343/multi-ai-agents.git
+cd multi-ai-agents
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Example Usage
+
+```bash
+# Run the Research Agent example
+python examples/research_example.py --document path/to/your/document.pdf
+```
+
+### Requirements
+
+- Python 3.8+
+- Dependencies listed in `requirements.txt`
 
 ## 🤝 Contributing
 
